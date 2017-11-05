@@ -1,28 +1,11 @@
 require 'gobject-introspection'
 
-# Namespace for Atspi classes. Autoloading with GObjectIntrospection is set up
-# here.
+# Namespace for Atspi classes.
 module Atspi
-  class << self
-    def const_missing(name)
-      init
-      if const_defined?(name)
-        const_get(name)
-      else
-        super
-      end
-    end
-
-    def init
-      class << self
-        remove_method(:init)
-        remove_method(:const_missing)
-      end
-      loader = GObjectIntrospection::Loader.new(self)
-      loader.load('Atspi')
-    end
-  end
 end
+
+# Load Atspi namespace with GObjectIntrospection.
+GObjectIntrospection::Loader.new(Atspi).load('Atspi')
 
 # Utility monkey-patches for the Atspi::Accessible class
 module AtspiAccessiblePatches
