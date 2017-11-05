@@ -1,6 +1,6 @@
-# Atspi App Driver
+# Ruby-GNOME2 App Driver
 
-Test driver for the Atspi-enabled applications. Takes care of boot and
+Test driver for Ruby-GNOME2 applications using Atspi. Takes care of boot and
 shutdown, and provides a handle on the GUI's main UI frame.
 
 ## Usage
@@ -10,11 +10,11 @@ code in `lib/`.
 
 Say, your application is called `foo`. Then, in your tests, do something like this:
 
-    require 'atspi_app_driver'
+    require 'gnome_app_driver'
 
     describe 'The application' do
       before do
-        @driver = AtspiAppDriver.new('foo')
+        @driver = GnomeAppDriver.new('foo')
 
         # This will boot `ruby -Ilib bin/foo`, wait for its main window to appear,
         # and focus it.
@@ -55,11 +55,11 @@ Say, your application is called `foo`. Then, in your tests, do something like th
 
 ## Installation
 
-    gem install atspi_app_driver
+    gem install gnome_app_driver
 
 ## Dependencies
 
-Atspi App Driver needs atspi's GIR data, and needs to be able to interact with
+Ruby-GNOME2 App Driver needs atspi's GIR data, and needs to be able to interact with
 the application via atspi and atk. The below are suggested packages to install.
 Corrections are welcome, of course.
 
@@ -78,7 +78,7 @@ Please try the instructions for Debian. This will probably not work on Ubuntu
 
 ### Other OS
 
-To be determined. Please contribute back your experience in getting Atspi App
+To be determined. Please contribute back your experience in getting Ruby-GNOME2 App
 Driver working on your favorite operation system.
 
 ## Contributing

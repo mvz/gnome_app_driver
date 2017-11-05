@@ -1,15 +1,15 @@
 Gem::Specification.new do |s|
-  s.name = 'atspi_app_driver'
+  s.name = 'gnome_app_driver'
   s.version = '0.1.0'
 
-  s.summary = 'Test GNOME applications using Atspi'
+  s.summary = 'Test Ruby-GNOME2 applications using Atspi'
 
   s.authors = ['Matijs van Zuijlen']
   s.email = ['matijs@matijs.net']
-  s.homepage = 'http://www.github.com/mvz/atspi_app_driver'
+  s.homepage = 'http://www.github.com/mvz/ruby-gnome2_app_driver'
 
   s.files = [
-    'lib/atspi_app_driver.rb',
+    'lib/gnome_app_driver.rb',
     'README.md',
     'Changelog.md',
     'LICENSE',

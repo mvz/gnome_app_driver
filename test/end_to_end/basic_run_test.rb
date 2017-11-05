@@ -1,9 +1,9 @@
 require_relative '../test_helper'
-require 'atspi_app_driver'
+require 'gnome_app_driver'
 
 describe 'test driving a dummy application' do
   before do
-    @driver = AtspiAppDriver.new('dummy', app_file: 'test/bin/dummy')
+    @driver = GnomeAppDriver.new('dummy', app_file: 'test/bin/dummy')
     @driver.boot
   end
 
@@ -21,7 +21,7 @@ end
 
 describe 'test driving an application without an accessible window' do
   before do
-    @driver = AtspiAppDriver.new('dummy', app_file: 'test/bin/no_window')
+    @driver = GnomeAppDriver.new('dummy', app_file: 'test/bin/no_window')
   end
 
   it 'will fail to boot' do

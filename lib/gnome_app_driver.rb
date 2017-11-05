@@ -54,7 +54,7 @@ Atspi::Accessible.include AtspiAccessiblePatches
 
 # Test driver for the Atspi-enabled applications. Takes care of boot and
 # shutdown, and provides a handle on the GUI's main UI frame.
-class AtspiAppDriver
+class GnomeAppDriver
   def initialize(app_name, app_file: nil, verbose: false)
     @app_file = app_file || "bin/#{app_name}"
     @lib_dir = 'lib'
