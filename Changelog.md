@@ -1,5 +1,9 @@
 # Change log
 
+## 0.1.1 / 2017-11-05
+
+* Release Ruby-GNOME2 version under a new name: gnome_app_driver
+
 ## 0.1.0 / 2017-04-25
 
 * Use Ruby-GNOME2 instead of GirFFI to provide GLib bindings
