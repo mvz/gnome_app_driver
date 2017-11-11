@@ -1,5 +1,9 @@
 # Change log
 
+## 0.1.2 / 2017-11-11
+
+* Update dependencies
+
 ## 0.1.1 / 2017-11-05
 
 * Release Ruby-GNOME2 version under a new name: gnome_app_driver

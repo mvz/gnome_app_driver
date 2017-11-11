@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'gnome_app_driver'
-  s.version = '0.1.1'
+  s.version = '0.1.2'
 
   s.summary = 'Test Ruby-GNOME2 applications using Atspi'
 
