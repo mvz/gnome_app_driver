@@ -3,6 +3,7 @@ Gem::Specification.new do |s|
   s.version = '0.1.2'
 
   s.summary = 'Test Ruby-GNOME2 applications using Atspi'
+  s.required_ruby_version = '>= 2.3.0'
 
   s.authors = ['Matijs van Zuijlen']
   s.email = ['matijs@matijs.net']
