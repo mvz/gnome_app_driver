@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'gobject-introspection'
 
 # Namespace for Atspi classes.
@@ -81,7 +83,7 @@ class GnomeAppDriver
   def cleanup
     status = exit_status
     @pid = nil
-    @thread.join if @thread
+    @thread&.join
     status
   end
 
