@@ -1,12 +1,18 @@
 # Change log
 
+## 0.2.0 / 2018-09-23
+
+* Update dependencies
+* Target Ruby 2.3+
+* Fix `#find_role` to handle symbolic role names
+
 ## 0.1.2 / 2017-11-11
 
 * Update dependencies
 
 ## 0.1.1 / 2017-11-05
 
-* Release Ruby-GNOME2 version under a new name: gnome_app_driver
+* Release Ruby-GNOME2 version under a new name: `gnome_app_driver`
 
 ## 0.1.0 / 2017-04-25
 
