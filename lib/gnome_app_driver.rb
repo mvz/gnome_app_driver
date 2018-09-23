@@ -19,6 +19,7 @@ module AtspiAccessiblePatches
   end
 
   def find_role(role, regex = //)
+    role = Atspi::Role.new role
     return self if role == self.role && name =~ regex
 
     each_child do |child|
