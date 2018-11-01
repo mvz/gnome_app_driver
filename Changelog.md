@@ -1,8 +1,11 @@
 # Change log
 
+## 0.2.1 / 2018-11-01
+
+* Loosen dependencies
+
 ## 0.2.0 / 2018-09-23
 
-* Update dependencies
 * Target Ruby 2.3+
 * Fix `#find_role` to handle symbolic role names
 
