@@ -1,6 +1,6 @@
 # Change log
 
-## 0.2.1 / 2018-11-01
+## 0.2.1 / 2018-11-03
 
 * Loosen dependencies
 
