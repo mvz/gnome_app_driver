@@ -2,13 +2,15 @@ language: ruby
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install dbus dbus-x11
+  # Needed for gtk3 and gobject-introspection gems
+  - sudo apt-get install libgtk-3-dev
+  # Provides A11y services used by this gem to drive SUT
   - sudo apt-get install at-spi2-core
-  - sudo apt-get install libgirepository1.0-dev gobject-introspection
+  # Needed for Atspi
   - sudo apt-get install gir1.2-atspi-2.0 libatk-adaptor
-  - sudo apt-get install libgtk-3-dev libatk1.0-dev libatspi2.0-dev
+  - sudo apt-get install libatk1.0-dev libatspi2.0-dev
 
-script: "xvfb-run dbus-launch bundle exec rake test"
+script: "xvfb-run bundle exec rake test"
 
 rvm:
   - 2.4
