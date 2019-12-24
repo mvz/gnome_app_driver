@@ -1,5 +1,10 @@
 language: ruby
 
+dist: xenial
+
+services:
+  - xvfb
+
 before_install:
   - sudo apt-get update
   # Needed for gtk3 and gobject-introspection gems
@@ -10,7 +15,8 @@ before_install:
   - sudo apt-get install gir1.2-atspi-2.0 libatk-adaptor
   - sudo apt-get install libatk1.0-dev libatspi2.0-dev
 
-script: "xvfb-run bundle exec rake test"
+cache:
+  bundler: true
 
 rvm:
   - 2.4
