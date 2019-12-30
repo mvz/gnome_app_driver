@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'gobject-introspection'
+require "gobject-introspection"
 
 # Namespace for Atspi classes.
 module Atspi
 end
 
 # Load Atspi namespace with GObjectIntrospection.
-GObjectIntrospection::Loader.new(Atspi).load('Atspi')
+GObjectIntrospection::Loader.new(Atspi).load("Atspi")
 
 # Utility monkey-patches for the Atspi::Accessible class
 module AtspiAccessiblePatches
@@ -44,7 +44,7 @@ Atspi::Accessible.include AtspiAccessiblePatches
 class GnomeAppDriver
   def initialize(app_name, app_file: nil, verbose: false)
     @app_file = app_file || "bin/#{app_name}"
-    @lib_dir = 'lib'
+    @lib_dir = "lib"
     @app_name = app_name
     @pid = nil
     @verbose = verbose
@@ -55,7 +55,7 @@ class GnomeAppDriver
   attr_reader :frame
 
   def boot(test_timeout: 30, exit_timeout: 10, arguments: [])
-    raise 'Already booted' if @pid
+    raise "Already booted" if @pid
 
     spawn_process(arguments)
 
@@ -64,8 +64,8 @@ class GnomeAppDriver
     @frame = find_and_focus_frame
 
     @thread = Thread.new do
-      wait_for('test to be done', test_timeout) { @cleanup }
-      wait_for('pid to go away', exit_timeout) { !@pid }
+      wait_for("test to be done", test_timeout) { @cleanup }
+      wait_for("pid to go away", exit_timeout) { !@pid }
       kill_process if @pid
     end
   end
@@ -92,14 +92,14 @@ class GnomeAppDriver
   private
 
   def find_and_focus_frame
-    acc = wait_for('app to appear', 10) { find_app }
-    raise 'App not found' unless acc
+    acc = wait_for("app to appear", 10) { find_app }
+    raise "App not found" unless acc
 
     frame = acc.get_child_at_index 0
     role = frame.role
     raise "Frame has unexpected role #{role.inspect}" unless role == :frame
 
-    wait_for('frame to be focused', 10) do
+    wait_for("frame to be focused", 10) do
       frame.state_set.contains(Atspi::StateType::ACTIVE)
     end
 
@@ -108,7 +108,7 @@ class GnomeAppDriver
 
   def kill_process
     log "About to kill child process #{@pid}"
-    Process.kill 'KILL', @pid
+    Process.kill "KILL", @pid
   end
 
   def log(message)
