@@ -1,5 +1,12 @@
 # Change log
 
+## 0.3.0 / 2020-11-14
+
+* Drop support for Ruby version 2.3 and 2.4
+* Remove `GnomeAppDriver#press_ctrl_q` because it does not and likely will never
+  work on Wayland. Use a regular action to quit your application instead.
+* Provide access to the main application Atspi object through `GnomeAppDriver#application`
+
 ## 0.2.1 / 2018-11-03
 
 * Loosen dependencies

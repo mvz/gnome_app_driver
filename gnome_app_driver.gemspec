@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "gnome_app_driver"
-  spec.version = "0.2.1"
+  spec.version = "0.3.0"
   spec.authors = ["Matijs van Zuijlen"]
   spec.email = ["matijs@matijs.net"]
 
