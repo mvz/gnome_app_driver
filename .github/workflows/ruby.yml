@@ -23,6 +23,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install non-ruby dependencies
       run: |
+        # Ensure all packages can be found
+        sudo apt-get update
         # Needed for gtk3 gem
         sudo apt-get install libgtk-3-dev
         # Needed to provide A11y dbus service to silence warnings
@@ -46,6 +48,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install non-ruby dependencies
       run: |
+        # Ensure all packages can be found
+        sudo apt-get update
         # Needed for gtk3 gem
         sudo apt-get install libgtk-3-dev
     - name: Set up Ruby
