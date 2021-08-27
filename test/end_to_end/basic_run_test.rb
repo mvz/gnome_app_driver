@@ -11,7 +11,7 @@ describe "test driving a dummy application" do
 
   it "starts and can be quit by activating an action" do
     frame = @driver.frame
-    button = frame.find_role :push_button
+    button = frame.find_role :push_button, /Close/
     button.do_action 0
 
     status = @driver.cleanup
@@ -22,7 +22,7 @@ describe "test driving a dummy application" do
     app = @driver.application
     _(app.role).must_equal Atspi::Role::APPLICATION
 
-    button = app.find_role :push_button
+    button = app.find_role :push_button, /Close/
     button.do_action 0
 
     status = @driver.cleanup
