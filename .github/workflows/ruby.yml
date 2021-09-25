@@ -17,45 +17,45 @@ jobs:
 
     strategy:
       matrix:
-        ruby: [2.5, 2.6, 2.7, "3.0"]
+        ruby: [2.6, 2.7, "3.0"]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install non-ruby dependencies
-      run: |
-        # Ensure all packages can be found
-        sudo apt-get update
-        # Needed for gtk3 gem
-        sudo apt-get install libgtk-3-dev
-        # Needed to provide A11y dbus service to silence warnings
-        sudo apt-get install at-spi2-core
-        # Provides xvfb-run
-        sudo apt-get install xvfb
+      - uses: actions/checkout@v2
+      - name: Install non-ruby dependencies
+        run: |
+          # Ensure all packages can be found
+          sudo apt-get update
+          # Needed for gtk3 gem
+          sudo apt-get install libgtk-3-dev
+          # Needed to provide A11y dbus service to silence warnings
+          sudo apt-get install at-spi2-core
+          # Provides xvfb-run
+          sudo apt-get install xvfb
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-    - name: Run tests in a dbus session
-      run: xvfb-run dbus-run-session bundle exec rake
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run tests in a dbus session
+        run: xvfb-run dbus-run-session bundle exec rake
 
   rubocop:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install non-ruby dependencies
-      run: |
-        # Ensure all packages can be found
-        sudo apt-get update
-        # Needed for gtk3 gem
-        sudo apt-get install libgtk-3-dev
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
-        bundler-cache: true
-    - name: Run RuboCop
-      run: bundle exec rubocop -P
+      - uses: actions/checkout@v2
+      - name: Install non-ruby dependencies
+        run: |
+          # Ensure all packages can be found
+          sudo apt-get update
+          # Needed for gtk3 gem
+          sudo apt-get install libgtk-3-dev
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: Run RuboCop
+        run: bundle exec rubocop -P
