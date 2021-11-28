@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "lib/gnome_app_driver/version"
+
 Gem::Specification.new do |spec|
   spec.name = "gnome_app_driver"
-  spec.version = "0.3.0"
+  spec.version = GnomeAppDriver::VERSION
   spec.authors = ["Matijs van Zuijlen"]
   spec.email = ["matijs@matijs.net"]
 
@@ -12,7 +14,6 @@ Gem::Specification.new do |spec|
   DESC
   spec.homepage = "http://www.github.com/mvz/ruby-gnome2_app_driver"
   spec.license = "LGPL-2.1+"
-
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
@@ -22,6 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.files = [
     "lib/gnome_app_driver.rb",
+    "lib/gnome_app_driver/version.rb",
     "README.md",
     "Changelog.md",
     "LICENSE"
