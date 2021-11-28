@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "gobject-introspection"
+require "gnome_app_driver/version"
 
 # Namespace for Atspi classes.
 module Atspi
