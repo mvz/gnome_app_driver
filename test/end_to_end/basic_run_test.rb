@@ -18,7 +18,7 @@ describe "test driving a dummy application" do
     _(status.exitstatus).must_equal 0
   end
 
-  it "provides acces to the main application Atspi object" do
+  it "provides access to the main application Atspi object" do
     app = @driver.application
     _(app.role).must_equal Atspi::Role::APPLICATION
 
