@@ -1,5 +1,10 @@
 # Change log
 
+## 0.3.1 / 2022-01-26
+
+* Drop support for Ruby version 2.5
+* Support up to Ruby 3.1
+
 ## 0.3.0 / 2020-11-14
 
 * Drop support for Ruby version 2.3 and 2.4
