@@ -38,8 +38,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.12"
   spec.add_development_dependency "pry", "~> 0.14.0"
   spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rubocop", "~> 1.25"
+  spec.add_development_dependency "rubocop", "~> 1.34"
   spec.add_development_dependency "rubocop-minitest", "~> 0.21.0"
-  spec.add_development_dependency "rubocop-packaging", "~> 0.5.0"
+  spec.add_development_dependency "rubocop-packaging", "~> 0.5.1"
   spec.add_development_dependency "rubocop-performance", "~> 1.13"
 end
