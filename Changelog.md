@@ -1,5 +1,9 @@
 # Change log
 
+## 0.3.2 / 2022-09-02
+
+* Loosen dependency on gobject-introspection to allow use with version 4.0
+
 ## 0.3.1 / 2022-01-26
 
 * Drop support for Ruby version 2.5
