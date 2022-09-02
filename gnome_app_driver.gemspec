@@ -32,9 +32,9 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = ["README.md", "Changelog.md"]
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "gobject-introspection", "~> 3.2"
+  spec.add_runtime_dependency "gobject-introspection", ">= 3.2", "< 5.0"
 
-  spec.add_development_dependency "gtk3", "~> 3.2"
+  spec.add_development_dependency "gtk3", ">= 3.2", "< 5.0"
   spec.add_development_dependency "minitest", "~> 5.12"
   spec.add_development_dependency "pry", "~> 0.14.0"
   spec.add_development_dependency "rake", "~> 13.0"
