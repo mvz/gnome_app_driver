@@ -1,5 +1,16 @@
 # Change log
 
+## 0.3.3 / 2024-01-05
+
+* Support Ruby 3.0 through 3.3, dropping support for 2.6 and 2.7
+  ([#77], [#78] and [#92] by [mvz])
+
+[mvz]: https://github.com/mvz
+
+[#77]: https://github.com/mvz/gnome_app_driver/pull/77
+[#78]: https://github.com/mvz/gnome_app_driver/pull/78
+[#92]: https://github.com/mvz/gnome_app_driver/pull/92
+
 ## 0.3.2 / 2022-09-02
 
 * Loosen dependency on gobject-introspection to allow use with version 4.0
