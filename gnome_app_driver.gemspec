@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   DESC
   spec.homepage = "http://www.github.com/mvz/ruby-gnome2_app_driver"
 
-  spec.license = "LGPL-2.1+"
+  spec.license = "LGPL-2.1-or-later"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
