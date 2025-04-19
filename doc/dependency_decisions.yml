@@ -41,3 +41,9 @@
     :why:
     :versions: []
     :when: 2025-04-19 19:19:34.231475229 Z
+- - :permit
+  - LGPL-2.1-or-later
+  - :who:
+    :why:
+    :versions: []
+    :when: 2025-04-19 19:22:20.240173442 Z
