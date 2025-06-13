@@ -15,17 +15,20 @@ describe "test driving a dummy application" do
     button.do_action 0
 
     status = @driver.cleanup
+
     _(status.exitstatus).must_equal 0
   end
 
   it "provides access to the main application Atspi object" do
     app = @driver.application
+
     _(app.role).must_equal Atspi::Role::APPLICATION
 
     button = app.find_role :push_button, /Close/
     button.do_action 0
 
     status = @driver.cleanup
+
     _(status.exitstatus).must_equal 0
   end
 
