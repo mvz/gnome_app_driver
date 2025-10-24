@@ -65,7 +65,7 @@ gem install gnome_app_driver
 ## Dependencies
 
 Ruby-GNOME2 App Driver depends on the `gobject-introspection` gem. It also
-requires Ruby 3.0 or higher.
+requires Ruby 3.2 or higher.
 
 ## Contributing
 
@@ -74,5 +74,5 @@ on GitHub.
 
 ## License
 
-Copyright &copy; 2015-2024 [Matijs van Zuijlen](http://www.matijs.net).
+Copyright &copy; 2015-2025 [Matijs van Zuijlen](http://www.matijs.net).
 See LICENSE for details.

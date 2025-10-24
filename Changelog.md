@@ -1,5 +1,15 @@
 # Change log
 
+## 0.3.4 / 2025-10-24
+
+* Support Ruby 3.2 through 3.4, dropping support for Ruby 3.0 and 3.1
+  ([#98] and [#104] by [mvz])
+* Update licensing information ([#102] by [mvz])
+
+[#98]: https://github.com/mvz/gnome_app_driver/pull/98
+[#102]: https://github.com/mvz/gnome_app_driver/pull/102
+[#104]: https://github.com/mvz/gnome_app_driver/pull/104
+
 ## 0.3.3 / 2024-01-05
 
 * Support Ruby 3.0 through 3.3, dropping support for 2.6 and 2.7
