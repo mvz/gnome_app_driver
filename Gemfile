@@ -7,6 +7,7 @@ gemspec
 group :development, :test do
   gem "gtk3", ">= 3.2", "< 5.0"
   gem "minitest", "~> 6.0"
+  gem "minitest-focus", "~> 1.3"
   gem "rake", "~> 13.0"
   gem "rubocop", "~> 1.85"
   gem "rubocop-minitest", "~> 0.39.1"
