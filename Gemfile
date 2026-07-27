@@ -10,7 +10,7 @@ group :development, :test do
   gem "minitest-focus", "~> 1.3"
   gem "rake", "~> 13.0"
   gem "rubocop", "~> 1.85"
-  gem "rubocop-minitest", "~> 0.39.1"
+  gem "rubocop-minitest", "~> 0.40.0"
   gem "rubocop-packaging", "~> 0.6.0"
   gem "rubocop-performance", "~> 1.26"
 end
